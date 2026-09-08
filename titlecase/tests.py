@@ -247,6 +247,14 @@ TEST_DATA = (
         "O'GranGe",
     ),
     (
+        "D'ARTAGNAN AND THE THREE MUSKETEERS",
+        "d'Artagnan and the Three Musketeers",
+    ),
+    (
+        "O'BRIEN'S HOUSE IS FOR SALE",
+        "O'Brien's House Is for Sale",
+    ),
+    (
         "o'melveny/o'doyle o'Melveny/o'doyle O'melveny/o'doyle o'melveny/o'Doyle o'melveny/O'doyle",
         "O'Melveny/O'Doyle O'Melveny/O'Doyle O'Melveny/O'Doyle O'Melveny/O'Doyle O'Melveny/O'Doyle",
     ),

@@ -123,10 +123,14 @@ def titlecase(text, callback=None, small_first_last=True, preserve_blank_lines=F
                     continue
 
             if APOS_SECOND.match(word):
+                # Everything past the second letter was shouted along with
+                # the rest of the line, so it needs the same downcasing the
+                # other branches below give their words before recapping.
+                rest = word[3:].lower() if all_caps else word[3:]
                 if len(word[0]) == 1 and word[0] not in 'aeiouAEIOU':
-                    word = word[0].lower() + word[1] + word[2].upper() + word[3:]
+                    word = word[0].lower() + word[1] + word[2].upper() + rest
                 else:
-                    word = word[0].upper() + word[1] + word[2].upper() + word[3:]
+                    word = word[0].upper() + word[1] + word[2].upper() + rest
                 tc_line.append(word)
                 continue
 
