@@ -98,7 +98,7 @@ def titlecase(text, callback=None, small_first_last=True, preserve_blank_lines=F
 
     """
     if preserve_blank_lines:
-        lines = regex.split('[\r\n]', text)
+        lines = regex.split(r'\r\n|\r|\n', text)
     else:
         lines = regex.split('[\r\n]+', text)
     processed = []
