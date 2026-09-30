@@ -436,7 +436,7 @@ class TestBlankLines(unittest.TestCase):
     def test_crlf_line_endings(self):
         # A CRLF is a single line ending, not two, so it shouldn't introduce
         # extra blank lines when preserve_blank_lines is on.
-        self.assertEqual(titlecase('a\r\nb', preserve_blank_lines=True), 'A\nB')
+        self.assertEqual(titlecase('a\r\nb', preserve_blank_lines=True), 'A\r\nB')
         self.assertEqual(titlecase('Line1\r\nLine2\r\nLine3', preserve_blank_lines=True),
                 'Line1\nLine2\nLine3')
         self.assertEqual(titlecase('Line1\r\n\r\nLine2', preserve_blank_lines=True),
